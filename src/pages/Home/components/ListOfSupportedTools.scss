@@ -1,0 +1,52 @@
+.list-of-supported-tools {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  $logo-size: 8em;
+  max-width: $logo-size * 3;
+  .logo {
+    width: $logo-size;
+    height: $logo-size;
+    padding: 1em;
+    will-change: filter;
+    transition: filter 300ms;
+    &.vite {
+      scale: 0.75;
+      @include glow-on-hover(#646cffaa);
+    }
+    &.react {
+      scale: 0.85;
+      @include glow-on-hover(#61dafbaa);
+      @include anim {
+        animation: spin-360 infinite 20s linear;
+      }
+    }
+    &.react-router {
+      scale: 0.85;
+      @include glow-on-hover(#f44250aa);
+    }
+    &.react-redux {
+      @include glow-on-hover(#764abc);
+    }
+    &.cypress {
+      scale: 0.9;
+      @include glow-on-hover(#58d09e7f);
+    }
+    &.typescript {
+      scale: 1;
+      @include glow-on-hover(#007acc);
+    }
+    &.vitest {
+      scale: 0.9;
+      @include glow-on-hover(#edd5327f);
+    }
+    &.sass {
+      @include glow-on-hover(#cd6799);
+    }
+    &.pwa {
+      @include glow-on-hover(#eeeeee7f);
+    }
+  }
+}

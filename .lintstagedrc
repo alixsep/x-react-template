@@ -1,0 +1,8 @@
+{
+  "*.{ts,tsx,js,jsx}": [
+    "prettier -uw --cache",
+    "eslint --cache --fix"
+  ],
+  "*.{json,md,mdx,html}": "prettier -uw --cache",
+  "*.{css,scss}": "stylelint --fix"
+}

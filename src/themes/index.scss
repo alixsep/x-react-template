@@ -1,0 +1,17 @@
+@import './light';
+
+@import './dark';
+
+// Make theme switching smooth.
+body,
+div,
+span,
+a,
+p,
+button,
+input,
+svg {
+  transition-property: background-color, border, border-color;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}

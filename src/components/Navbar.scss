@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  min-width: 256px;
+  width: 100%;
+  .navbar-left,
+  .navbar-right {
+    display: flex;
+    gap: 8px;
+    .icon {
+      width: $size-m;
+      background-color: $color-background-darker;
+      border-radius: 8px;
+    }
+    .button-alike {
+      background-color: $color-background-darker;
+      border-radius: 8px;
+      padding: 0 1em;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .outer-link {
+      color: $color-text-secondary;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  .navbar-left {
+    margin: 0 1em 0 0;
+  }
+}

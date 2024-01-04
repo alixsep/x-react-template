@@ -1,0 +1,55 @@
+/**
+ * This style sheet should contain css that is meant to
+ * be across the whole app.
+ */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  color-scheme: dark;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: $color-text;
+  background-color: $color-background;
+}
+
+#root {
+  width: 100%;
+  max-width: $size-max-root;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+a {
+  font-weight: 500;
+  color: $color-text;
+  text-decoration: inherit;
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+h1 {
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+code {
+  all: revert;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}

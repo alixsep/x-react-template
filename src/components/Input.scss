@@ -1,0 +1,9 @@
+.custom-input {
+  background-color: $color-background-darker;
+  height: $size-m;
+  border-radius: 8px;
+  border-bottom: 2px solid $color-primary;
+  &::placeholder {
+    opacity: 0.5;
+  }
+}

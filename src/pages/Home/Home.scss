@@ -1,0 +1,14 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .list-of-supported-tools {
+    flex-grow: 1;
+  }
+  .card {
+    padding: 2em;
+  }
+  .read-the-docs {
+    color: $color-text-secondary;
+  }
+}
