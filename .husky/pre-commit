@@ -1,1 +1,5 @@
-pnpm lint-staged
+# Run lint-staged to execute linters on staged files
+pnpm lint-staged && 
+
+# Run validate to run vitest and cypress
+pnpm validate

@@ -1,6 +1,10 @@
-import { type ReactNode, type FC, useLayoutEffect } from 'react'
+import { type ReactNode, type FC, useEffect } from 'react'
 import { useAppSelector } from '@redux/app/hooks'
-import { selectTheme } from '@redux/features/theme/themeSlice.ts'
+import {
+  selectTheme,
+  type ThemeValueType,
+} from '@redux/features/theme/themeSlice.ts'
+import themes from './themes'
 
 type ThemeProviderType = {
   children: ReactNode
@@ -19,11 +23,16 @@ type ThemeProviderType = {
  * @returns The rendered `ThemeProvider` component.
  */
 const ThemeProvider: FC<ThemeProviderType> = ({ children }) => {
-  const theme = useAppSelector(selectTheme)
+  const theme: ThemeValueType = useAppSelector(selectTheme)
 
-  useLayoutEffect(() => {
-    document.body.setAttribute('data-theme', theme)
-    console.log(`Applied ${theme} theme.`)
+  useEffect(() => {
+    const chosenTheme = themes[theme]
+    for (const key in chosenTheme) {
+      document.documentElement.style.setProperty(
+        key,
+        chosenTheme[key as keyof typeof chosenTheme],
+      )
+    }
   }, [theme])
 
   return children

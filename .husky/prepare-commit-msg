@@ -1,1 +1,9 @@
-exec < /dev/tty && pnpm cz --hook || true
+# Redirect standard input to the terminal (/dev/tty) to ensure user interaction
+exec < /dev/tty && 
+
+# Run the 'pnpm cz' command in hook mode, which is typically used in Git hooks
+# The '--hook' flag indicates hook mode, where the command may interact with the user
+pnpm cz --hook || 
+
+# Ensure the command returns a successful exit code (0) even if 'pnpm cz' fails
+true

@@ -5,6 +5,12 @@ import { VitePWA } from 'vite-plugin-pwa'
 import pwaConfig from './pwa.config'
 import sassConfig from './sass.config'
 
+/**
+ * Configuration settings for Vite setup, including plugins for TypeScript
+ * path resolution, React support, and Progressive Web App (PWA) integration.
+ * Additionally, server and preview settings are defined for local development,
+ * with test environment configuration for Vitest and Sass styling support.
+ */
 export default defineConfig({
   plugins: [tsconfigPaths(), react(), VitePWA(pwaConfig)],
   server: {

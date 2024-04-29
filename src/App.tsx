@@ -1,6 +1,5 @@
 // Import styles in the correct order.
 import 'the-new-css-reset/css/reset.css'
-import './themes/index.scss'
 import './App.scss'
 
 // Import other things.
