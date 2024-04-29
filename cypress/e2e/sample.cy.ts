@@ -1,3 +1,7 @@
+/**
+ * Feature:
+ */
+
 describe('sample spec', () => {
   it('passes', () => {
     cy.visit('/')

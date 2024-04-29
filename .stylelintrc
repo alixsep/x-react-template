@@ -2,7 +2,7 @@
   "allowEmptyInput": true,
   "extends": [
     "stylelint-config-standard-scss",
-    "stylelint-prettier/recommended"
+    "stylelint-prettier"
   ],
   "defaultSeverity": "warning",
   "rules": {

@@ -9,7 +9,8 @@ import {
 
 const images = import.meta.glob(`../../assets/*.svg`, {
   eager: true,
-  as: 'url',
+  query: '?url',
+  import: 'default',
 })
 
 import './Tool.scss'
@@ -21,7 +22,7 @@ const Tool: FC = () => {
     (x) => x.className === tool,
   ) as supportedToolType
 
-  const src = images[`../../assets/${className}.svg`]
+  const src = images[`../../assets/${className}.svg`] as string
 
   return (
     <div className='tool-page'>

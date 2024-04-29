@@ -5,7 +5,8 @@ import { type supportedToolType } from '@data'
 
 const images = import.meta.glob(`../../../assets/*.svg`, {
   eager: true,
-  as: 'url',
+  query: '?url',
+  import: 'default',
 })
 
 import './ListOfSupportedTools.scss'
@@ -20,7 +21,7 @@ const ListOfSupportedTools: FC<ListOfSupportedToolsType> = ({
   return (
     <div className='list-of-supported-tools'>
       {listOfSupportedTools.map(({ name, className }: supportedToolType) => {
-        const src = images[`../../../assets/${className}.svg`]
+        const src = images[`../../../assets/${className}.svg`] as string
         return (
           <Link key={className} to={className}>
             <img

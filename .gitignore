@@ -32,3 +32,6 @@ cypress/videos
 # Cache files
 .eslintcache
 .stylelintcache
+
+# Dump directories
+misc
