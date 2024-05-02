@@ -64,7 +64,7 @@ We welcome contributions! If you find any issues or have improvements to suggest
 - Add support for GitHub actions.
 - Add coverage for testing.
 - Add support for Cucumber.
-- Check if there is a better way to implement theming.
+- Make theme customizable by client.
 - _...other improvements and bug fixes?_
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
